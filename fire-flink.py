@@ -19,7 +19,7 @@ def login(token):
     }
     head["Authorization"] = "Bearer " + token
     suiteid = 'SUITE1474'
-    baseUrl = 'https://app.fireflink.com'
+    baseUrl = 'http://10.10.10.172'
     pes = s.post(baseUrl+':8109/optimize/v1/dashboard/execution/suite/' + suiteid, headers=head)
     out = json.loads(pes.content)
     exid = out['responseObject']['id']
